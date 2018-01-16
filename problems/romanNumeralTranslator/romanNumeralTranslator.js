@@ -30,4 +30,17 @@ var translateRomanNumeral = function(romanNumeral) {
 // TODO: Implement me!
 /* START SOLUTION */
   /* END SOLUTION */
+  var num = 0;
+  translateRomanNumeral.prototype = Object.create(DIGIT_VALUES);
+  for(var key in this.DIGIT_VALUES){
+    if(romanNumeral[0] < romanNumeral[1]){
+      romanNumeral[1] - romanNumeral[0];
+      return num;
+    }else if(romanNumeral[0] > romanNumeral[1]){
+      num = romanNumeral;
+      return num;
+    }else{
+      return null;
+    }
+  }
 };
